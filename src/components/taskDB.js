@@ -15,14 +15,14 @@ function TaskDB(props) {
     const navArray = props.tasks.map(task => {
         return (
             <div key={task.id} className="list">
-                <div className="deleteButtonConteiter"> {task.header}<button className="deleteButton" onClick={() => {setTypeModal("removeList")
+                <div className="deleteButtonConteiter"> <button className="deleteButton" onClick={() => {setTypeModal("removeList")
                                     setHeadModal("Подтверждение удаления")
                                     setTextModal(task.header)
                                     setIDModal(task.id)
                                     document.getElementById("modal").classList.add("modalShow")
                                     document.getElementById("modal").classList.remove("modalHide")
                         }}>✖</button></div>
-                <Link to={"/" + task.id}><TaskList head={task.header} kay={task.id} store={task.store} readonly={true} /></Link>
+                <Link to={"/" + task.id}>{task.header}<TaskList head={task.header} kay={task.id} store={task.store} readonly={true} /></Link>
                 
             </div>
         )
