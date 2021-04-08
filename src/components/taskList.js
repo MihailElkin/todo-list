@@ -8,9 +8,6 @@ function TaskList(props) {
             localStorage.removeItem(props.id)
             localStorage.setItem(props.id, JSON.stringify(props.store))
             console.log("effect")
-            return () => {
-                alert(123)
-            }
         }
     }, [])
     var taskArray = props.store.map((task) => task.done ? "" : <Task setSave={setSave} kay={task.id} task={task} doneTask={props.doneTask} removeTask={props.removeTask} editTask={props.editTask} readonly={props.readonly} list={props.kay} />)
