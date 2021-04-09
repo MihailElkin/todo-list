@@ -1,75 +1,7 @@
 import { createStore } from "redux"
 
 const initialStore = {
-    DBData: localStorage.getItem("todoStore")? JSON.parse(localStorage.getItem("todoStore")) : [
-        {
-            id: 1,
-            store: [
-                {
-                    id: 1,
-                    text: "дело раз",
-                    done: false
-                },
-                {
-                    id: 2,
-                    text: "дело дваз",
-                    done: false
-                }
-                ,
-                {
-                    id: 3,
-                    text: "дело триз",
-                    done: false
-                }
-            ],
-            color: 'red'
-        },
-        {
-            id: 2,
-            store: [
-                {
-                    id: 1,
-                    text: "дело раз",
-                    done: true
-                },
-                {
-                    id: 2,
-                    text: "дело дваз",
-                    done: false
-                }
-                ,
-                {
-                    id: 3,
-                    text: "дело триз",
-                    done: false
-                }
-            ],
-            color: 'red'
-        }
-        ,
-        {
-            id: 3,
-            store: [
-                {
-                    id: 1,
-                    text: "дело раз",
-                    done: false
-                },
-                {
-                    id: 2,
-                    text: "дело дваз",
-                    done: true
-                }
-                ,
-                {
-                    id: 3,
-                    text: "дело триз",
-                    done: false
-                }
-            ],
-            color: 'red'
-        }
-    ]
+    DBData: localStorage.getItem("todoStore")? JSON.parse(localStorage.getItem("todoStore")) : []
 };
 export function newTask(text, listId) {
     return {

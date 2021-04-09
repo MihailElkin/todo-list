@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 function Task(props) {
     const [taskText, setText] = useState("")
     const [edit, setEdit] = useState(false)
